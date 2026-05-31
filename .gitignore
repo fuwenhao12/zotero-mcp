@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+py_deps/
+
+# Temporary files
+*.tmp*
+*.tmp4
+*.bak
+*.swp
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Output directories
+paper_rewriting_output/
+
+# Word backup files
+~$*.docx
+
+# Generated formula demo files
+formula_demo_*.docx
+com_test.docx
+mt_test.docx
+
+# Zotero MCP config (contains API keys - DO NOT COMMIT)
+.zotero-mcp.json

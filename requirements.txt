@@ -1,0 +1,2 @@
+pyzotero>=1.5.0
+httpx>=0.27.0
