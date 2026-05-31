@@ -177,6 +177,22 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Changelog
 
+### v1.2.0 (2026-05-31)
+
+**New features — Zotero MCP 集成:**
+
+- **`scripts/zotero_mcp_server.py`** — Zotero MCP 服务器。遵循 Model Context Protocol (MCP) 协议，通过 JSON-RPC 2.0 提供 AI 助手与 Zotero 文献库的实时交互。支持：
+  - `check_connection` — 验证 API 连接
+  - `list_collections` — 列出文献集合
+  - `search_items` — 搜索文献（关键词/集合筛选）
+  - `get_item` — 获取文献详情（摘要、DOI、标签等）
+  - `generate_bibliography` — 生成格式化参考文献（GB/T 7714 / IEEE / APA / Nature / Science 等 8 种格式）
+  - `get_library_stats` — 文献库统计
+  - `list_styles` — 列出支持的引文格式
+- **`scripts/zotero_bridge.py`** — Zotero 桥接脚本。提供 CLI 接口查询 Zotero、生成引用、插入论文。
+- **`.zotero-mcp.json.example`** — MCP 配置模板。复制为 `~/.zotero-mcp.json` 或设置 `ZOTERO_API_KEY` / `ZOTERO_USER_ID` 环境变量即可启用。
+- **依赖** — `pyzotero` 库用于 Zotero 网页 API 访问 (`pip install pyzotero`)。
+
 ### v1.0.0 (2026-05-31)
 
 - **`scripts/zotero_mcp_server.py`** — Zotero MCP 服务器。遵循 Model Context Protocol (MCP) 协议，通过 JSON-RPC 2.0 提供 AI 助手与 Zotero 文献库的实时交互。支持 7 个工具：`check_connection`、`list_collections`、`search_items`、`get_item`、`generate_bibliography`、`get_library_stats`、`list_styles`。
